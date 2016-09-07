@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Flash_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSa-cx-o28">
+                                <rect key="frame" x="20" y="496" width="560" height="50"/>
+                                <color key="backgroundColor" red="0.90780320600032671" green="0.46370102397481794" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GMm-j3-FqD"/>
+                                </constraints>
+                                <state key="normal" title="Reveal Answer"/>
+                                <connections>
+                                    <action selector="revealAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EPR-em-QJB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bc1-Je-wv3">
+                                <rect key="frame" x="20" y="257" width="560" height="102"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbQ-Um-0Iq">
+                                <rect key="frame" x="20" y="421" width="560" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.7912437151855316" blue="0.26789462839024947" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ska-qh-hD3"/>
+                                </constraints>
+                                <state key="normal" title="Next Card"/>
+                                <connections>
+                                    <action selector="nextQuestionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FN6-6H-hja"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTy-0v-aOh">
+                                <rect key="frame" x="20" y="85" width="560" height="158"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="158" id="995-r6-WJv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UTy-0v-aOh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2i3-xO-EdV"/>
+                            <constraint firstItem="UTy-0v-aOh" firstAttribute="leading" secondItem="bc1-Je-wv3" secondAttribute="leading" id="6C1-Hi-rSh"/>
+                            <constraint firstItem="NbQ-Um-0Iq" firstAttribute="top" secondItem="bc1-Je-wv3" secondAttribute="bottom" constant="62" id="7HJ-G7-E1e"/>
+                            <constraint firstItem="bc1-Je-wv3" firstAttribute="trailing" secondItem="NbQ-Um-0Iq" secondAttribute="trailing" id="92a-Aa-Sp8"/>
+                            <constraint firstItem="UTy-0v-aOh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="85" id="LNl-1j-JTd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iSa-cx-o28" secondAttribute="bottom" constant="54" id="aAd-UB-A5S"/>
+                            <constraint firstItem="UTy-0v-aOh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="f8o-wX-uas"/>
+                            <constraint firstItem="NbQ-Um-0Iq" firstAttribute="leading" secondItem="iSa-cx-o28" secondAttribute="leading" id="g40-zB-ilQ"/>
+                            <constraint firstItem="UTy-0v-aOh" firstAttribute="trailing" secondItem="bc1-Je-wv3" secondAttribute="trailing" id="gXt-d3-QXA"/>
+                            <constraint firstItem="bc1-Je-wv3" firstAttribute="top" secondItem="UTy-0v-aOh" secondAttribute="bottom" constant="14" id="mc9-XA-UO2"/>
+                            <constraint firstItem="bc1-Je-wv3" firstAttribute="leading" secondItem="NbQ-Um-0Iq" secondAttribute="leading" id="mtX-3F-F2y"/>
+                            <constraint firstItem="iSa-cx-o28" firstAttribute="top" secondItem="NbQ-Um-0Iq" secondAttribute="bottom" constant="25" id="sII-dD-KOU"/>
+                            <constraint firstItem="NbQ-Um-0Iq" firstAttribute="trailing" secondItem="iSa-cx-o28" secondAttribute="trailing" id="x7p-Xu-z5N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="bc1-Je-wv3" id="std-R5-ZTH"/>
+                        <outlet property="questionLabel" destination="UTy-0v-aOh" id="aYG-7m-cRP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="256" y="387"/>
+        </scene>
+    </scenes>
+</document>
